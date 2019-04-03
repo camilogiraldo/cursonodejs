@@ -48,10 +48,10 @@ if (cursos[argv.codigo]) {
 } else {
 	console.log('El codigo que ingresó no es valido');
 	console.log('Los cursos actuales son:');
-	console.log('Codigo: ' + cursos[0].id + ', Curso: ' + cursos[0].curso + ', precio:' + cursos[0].precio + ', Duracion: ' + cursos[0].tiempo);
-	console.log('Codigo: ' + cursos[1].id + ', Curso: ' + cursos[1].curso + ', precio:' + cursos[1].precio + ', Duracion: ' + cursos[1].tiempo);
-	console.log('Codigo: ' + cursos[2].id + ', Curso: ' + cursos[2].curso + ', precio:' + cursos[2].precio + ', Duracion: ' + cursos[2].tiempo);
+	cursos.forEach(curso => {
+		console.log('Codigo: ' + curso.id + ', Curso: ' + curso.curso + ', precio:' + curso.precio + ', Duracion: ' + curso.tiempo);
 
+	});
 }
 
 app.get('/', function (req, res) {
